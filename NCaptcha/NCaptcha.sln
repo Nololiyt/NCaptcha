@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.Interfaces", "NCaptcha.Interfaces\NCaptcha.Interfaces.csproj", "{335CC135-6444-41A1-B729-3BC70E8DED3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCaptcha.Interfaces", "NCaptcha.Interfaces\NCaptcha.Interfaces.csproj", "{335CC135-6444-41A1-B729-3BC70E8DED3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.CaptchaFactories.Image", "NCaptcha.CaptchaFactories.Image\NCaptcha.CaptchaFactories.Image.csproj", "{A98D8658-888C-4A01-A044-49AF5D6833EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCaptcha.CaptchaFactories.Image", "NCaptcha.CaptchaFactories.Image\NCaptcha.CaptchaFactories.Image.csproj", "{A98D8658-888C-4A01-A044-49AF5D6833EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.CaptchaFactories.Base", "NCaptcha.CaptchaFactories.Base\NCaptcha.CaptchaFactories.Base.csproj", "{6BACE64E-1A8D-43BA-A240-D1C021253589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCaptcha.CaptchaFactories.Base", "NCaptcha.CaptchaFactories.Base\NCaptcha.CaptchaFactories.Base.csproj", "{6BACE64E-1A8D-43BA-A240-D1C021253589}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.AnswerSavers.InMemoryGuidDictionary", "NCaptcha.AnswerSavers.InMemoryGuidDictionary\NCaptcha.AnswerSavers.InMemoryGuidDictionary.csproj", "{EFA9A7B0-55FA-48FD-9115-326711A8F96D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCaptcha.AnswerSavers.InMemoryGuidDictionary", "NCaptcha.AnswerSavers.InMemoryGuidDictionary\NCaptcha.AnswerSavers.InMemoryGuidDictionary.csproj", "{EFA9A7B0-55FA-48FD-9115-326711A8F96D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.TicketFactories.InMemoryGuidDictionary", "NCaptcha.TicketFactories.InMemoryGuidDictionary\NCaptcha.TicketFactories.InMemoryGuidDictionary.csproj", "{5CA707C2-5DFE-4202-BD8F-A627F18BEE06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NCaptcha.TicketFactories.InMemoryGuidDictionary", "NCaptcha.TicketFactories.InMemoryGuidDictionary\NCaptcha.TicketFactories.InMemoryGuidDictionary.csproj", "{5CA707C2-5DFE-4202-BD8F-A627F18BEE06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuickImplementations", "QuickImplementations", "{D2ABBE79-6027-4F1A-B70E-9C1658776D6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AnswerSaverAndTicketFactory", "AnswerSaverAndTicketFactory", "{0F092562-7EFF-4279-8428-8C40D42EB510}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests1", "NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests1\NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests1.csproj", "{C5AF6420-9605-4878-A8E4-3560CD30FFD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.TicketFactories.InMemoryGuidDictionaryTests", "NCaptcha.TicketFactories.InMemoryGuidDictionaryTests\NCaptcha.TicketFactories.InMemoryGuidDictionaryTests.csproj", "{A3027B0F-2695-4A3A-9DC6-14FD531BD7B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests", "NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests\NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests.csproj", "{4F82D324-75F6-4826-B275-2FB19253ED4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +47,14 @@ Global
 		{5CA707C2-5DFE-4202-BD8F-A627F18BEE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CA707C2-5DFE-4202-BD8F-A627F18BEE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CA707C2-5DFE-4202-BD8F-A627F18BEE06}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5AF6420-9605-4878-A8E4-3560CD30FFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5AF6420-9605-4878-A8E4-3560CD30FFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5AF6420-9605-4878-A8E4-3560CD30FFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5AF6420-9605-4878-A8E4-3560CD30FFD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3027B0F-2695-4A3A-9DC6-14FD531BD7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3027B0F-2695-4A3A-9DC6-14FD531BD7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3027B0F-2695-4A3A-9DC6-14FD531BD7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3027B0F-2695-4A3A-9DC6-14FD531BD7B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F82D324-75F6-4826-B275-2FB19253ED4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F82D324-75F6-4826-B275-2FB19253ED4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F82D324-75F6-4826-B275-2FB19253ED4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F82D324-75F6-4826-B275-2FB19253ED4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,7 +65,8 @@ Global
 		{EFA9A7B0-55FA-48FD-9115-326711A8F96D} = {0F092562-7EFF-4279-8428-8C40D42EB510}
 		{5CA707C2-5DFE-4202-BD8F-A627F18BEE06} = {0F092562-7EFF-4279-8428-8C40D42EB510}
 		{0F092562-7EFF-4279-8428-8C40D42EB510} = {D2ABBE79-6027-4F1A-B70E-9C1658776D6E}
-		{C5AF6420-9605-4878-A8E4-3560CD30FFD0} = {0F092562-7EFF-4279-8428-8C40D42EB510}
+		{A3027B0F-2695-4A3A-9DC6-14FD531BD7B0} = {0F092562-7EFF-4279-8428-8C40D42EB510}
+		{4F82D324-75F6-4826-B275-2FB19253ED4E} = {0F092562-7EFF-4279-8428-8C40D42EB510}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDD0A729-ACE2-43CD-A1B3-06B4DCFC31E3}

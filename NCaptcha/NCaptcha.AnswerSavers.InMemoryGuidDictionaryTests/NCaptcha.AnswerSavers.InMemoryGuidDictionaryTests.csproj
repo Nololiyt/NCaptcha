@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NCaptcha.AnswerSavers.InMemoryGuidDictionary\NCaptcha.AnswerSavers.InMemoryGuidDictionary.csproj" />
-    <ProjectReference Include="..\NCaptcha.Interfaces\NCaptcha.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

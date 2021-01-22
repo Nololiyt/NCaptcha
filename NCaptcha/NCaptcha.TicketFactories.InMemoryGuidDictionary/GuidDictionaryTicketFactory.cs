@@ -32,7 +32,7 @@ namespace Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary
             this.deleteTaskTokenSource = new CancellationTokenSource();
             CancellationToken deleteTaskToken = this.deleteTaskTokenSource.Token;
             if (ticketsLifeTime.HasValue)
-                _ = KeepDeleteAsync(deleteTaskToken);
+                _ = this.KeepDeleteAsync(deleteTaskToken);
         }
 
         private async Task KeepDeleteAsync(CancellationToken cancellationToken)
@@ -43,21 +43,21 @@ namespace Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary
                 if (cancellationToken.IsCancellationRequested)
                     return;
                 await Task.Delay(new TimeSpan(0, 0, 1), cancellationToken);
-                foreach(var (key, time) in RandomPairs().Take(10))
+                foreach (var (key, time) in this.RandomPairs().Take(10))
                 {
                     if (time < DateTime.UtcNow)
-                        tickets.TryRemove(key, out _);
+                        this.tickets.TryRemove(key, out _);
                 }
             }
         }
         private IEnumerable<(Guid, DateTime?)> RandomPairs()
         {
             Random rand = new Random();
-            var keys = tickets.Keys.ToImmutableArray();
-            for(; ; )
+            var keys = this.tickets.Keys.ToImmutableArray();
+            for (; ; )
             {
                 var key = keys[rand.Next(keys.Length)];
-                if (tickets.TryGetValue(key, out var dt))
+                if (this.tickets.TryGetValue(key, out var dt))
                     yield return (key, dt);
             }
         }

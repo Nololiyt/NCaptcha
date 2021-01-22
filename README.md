@@ -1,2 +1,4 @@
 # NCaptcha
-An captcha library in C#.
+A captcha library in C#.
+
+View our wiki page to know more!

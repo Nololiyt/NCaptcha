@@ -4,6 +4,20 @@
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Nololiyt.Captcha.CaptchaFactories</RootNamespace>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>Nololiyt.Captcha.CaptchaFactories</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>yueyinqiu5990</Authors>
+    <Company>Nololiyt</Company>
+    <Product>NCaptcha.CaptchaFactories</Product>
+    <Description>It's just a part of NCaptcha. Although you could just use it alone, but in most cases some more packages may be used with it.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Nololiyt/NCaptcha/wiki</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Nololiyt/NCaptcha.git</RepositoryUrl>
+    <PackageTags>captcha</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>©2021 Nololiyt</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

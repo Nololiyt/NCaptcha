@@ -41,10 +41,10 @@ namespace Nololiyt.Captcha.CaptchaAnswerSavers
         /// Dispose the instance.
         /// </summary>
         /// <returns></returns>
-        public ValueTask DisposeAsync()
+        public void Dispose()
         {
             this.disposedValue = true;
-            return ValueTask.CompletedTask;
+            GC.SuppressFinalize(this);
         }
         /// <summary>
         /// Save an answer.

@@ -102,8 +102,8 @@ namespace Nololiyt.Captcha.CaptchaFactories
             {
                 if (this.disposeSaver)
                 {
-                    this.answerSaver?.DisposeAsync().AsTask().Wait();
-                    this.ticketFactory?.DisposeAsync().AsTask().Wait();
+                    this.answerSaver.Dispose();
+                    this.ticketFactory.Dispose();
                     this.DisposeMore();
                 }
                 this.IsDisposed = true;

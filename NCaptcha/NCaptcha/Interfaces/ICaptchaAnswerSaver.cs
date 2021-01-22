@@ -8,7 +8,7 @@ namespace Nololiyt.Captcha.Interfaces
     /// Represents an answer saver to save captcha answers.
     /// </summary>
     /// <typeparam name="TAnswer"></typeparam>
-    public interface ICaptchaAnswerSaver<TAnswer> : IAsyncDisposable
+    public interface ICaptchaAnswerSaver<TAnswer> : IDisposable
     {
         /// <summary>
         /// The life time of an answer.

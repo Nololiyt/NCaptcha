@@ -1,6 +1,9 @@
 ﻿using Nololiyt.Captcha.Interfaces;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -16,7 +19,7 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary
         private readonly ConcurrentDictionary<Guid, (string, DateTime?)> answers
             = new ConcurrentDictionary<Guid, (string, DateTime?)>();
         private readonly TimeSpan? answersLifeTime;
-
+        private readonly CancellationTokenSource deleteTaskTokenSource;
         /// <summary>
         /// Initialize a new instance of <see cref="GuidDictionaryStringAnswerSaver"/>.
         /// </summary>
@@ -26,8 +29,38 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary
             if (answersLifeTime <= TimeSpan.Zero)
                 throw new ArgumentOutOfRangeException(nameof(answersLifeTime));
             this.answersLifeTime = answersLifeTime;
+            this.deleteTaskTokenSource = new CancellationTokenSource();
+            CancellationToken deleteTaskToken = this.deleteTaskTokenSource.Token;
+            if (answersLifeTime.HasValue)
+                _ = KeepDeleteAsync(deleteTaskToken);
         }
 
+        private async Task KeepDeleteAsync(CancellationToken cancellationToken)
+        {
+            Random random = new Random();
+            for (; ; )
+            {
+                if (cancellationToken.IsCancellationRequested)
+                    return;
+                await Task.Delay(new TimeSpan(0, 0, 1), cancellationToken);
+                foreach (var (key, time) in RandomPairs().Take(10))
+                {
+                    if (time < DateTime.UtcNow)
+                        answers.TryRemove(key, out _);
+                }
+            }
+        }
+        private IEnumerable<(Guid, DateTime?)> RandomPairs()
+        {
+            Random rand = new Random();
+            var keys = answers.Keys.ToImmutableArray();
+            for (; ; )
+            {
+                var key = keys[rand.Next(keys.Length)];
+                if (answers.TryGetValue(key, out var dt))
+                    yield return (key, dt.Item2);
+            }
+        }
         /// <summary>
         /// The life time of an answer.
         /// </summary>

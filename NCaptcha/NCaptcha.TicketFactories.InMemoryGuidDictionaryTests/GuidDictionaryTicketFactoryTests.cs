@@ -1,9 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -35,7 +32,8 @@ namespace Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary.Tests
             for (int i = 0; i < 10000; i++)
             {
                 int i2 = i;
-                tasks.Add(Task.Run(() => {
+                tasks.Add(Task.Run(() =>
+                {
                     return saver2.GenerateNewAsync().AsTask().Result;
                 }));
             }
@@ -45,7 +43,8 @@ namespace Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary.Tests
             for (int i = 0; i < 10000; i++)
             {
                 int i2 = i;
-                getTasks.Add(Task.Run(() => {
+                getTasks.Add(Task.Run(() =>
+                {
                     var r = saver2.VerifyAsync(tasks[i2].Result).AsTask().Result;
                     Assert.AreEqual(true, r);
                 }));
@@ -56,7 +55,8 @@ namespace Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary.Tests
             for (int i = 0; i < 10000; i++)
             {
                 int i2 = i;
-                getTasks2.Add(Task.Run(() => {
+                getTasks2.Add(Task.Run(() =>
+                {
                     var r = saver2.VerifyAsync(tasks[i2].Result).AsTask().Result;
                     Assert.AreEqual(false, r);
                 }));

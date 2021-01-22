@@ -1,12 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Nololiyt.Captcha.CaptchaFactories.Image;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary;
 using Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary;
+using System;
 
 namespace Nololiyt.Captcha.CaptchaFactories.Image.Tests
 {

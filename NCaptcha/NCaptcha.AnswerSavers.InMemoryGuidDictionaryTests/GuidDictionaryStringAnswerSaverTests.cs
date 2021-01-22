@@ -1,9 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -35,7 +32,8 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary.Tests
             for (int i = 0; i < 10000; i++)
             {
                 int i2 = i;
-                tasks.Add(Task.Run(() => {
+                tasks.Add(Task.Run(() =>
+                {
                     return saver2.SaveAsync(i2.ToString()).AsTask().Result;
                 }));
             }
@@ -45,7 +43,8 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary.Tests
             for (int i = 0; i < 10000; i++)
             {
                 int i2 = i;
-                getTasks.Add(Task.Run(() => {
+                getTasks.Add(Task.Run(() =>
+                {
                     var r = saver2.TryGetAndRemoveAsync(tasks[i2].Result).AsTask().Result;
                     Assert.AreEqual(i2.ToString(), r);
                 }));

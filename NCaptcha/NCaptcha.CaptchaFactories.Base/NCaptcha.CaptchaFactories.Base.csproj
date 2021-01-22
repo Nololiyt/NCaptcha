@@ -6,11 +6,11 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>Nololiyt.Captcha.CaptchaFactories</PackageId>
+    <PackageId>Nololiyt.Captcha.CaptchaFactories.Base</PackageId>
     <Version>1.0.0</Version>
     <Authors>yueyinqiu5990</Authors>
     <Company>Nololiyt</Company>
-    <Product>NCaptcha.CaptchaFactories</Product>
+    <Product>NCaptcha.CaptchaFactories.Base</Product>
     <Description>It's just a part of NCaptcha. Although you could just use it alone, but in most cases some more packages may be used with it.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Nololiyt/NCaptcha/wiki</PackageProjectUrl>

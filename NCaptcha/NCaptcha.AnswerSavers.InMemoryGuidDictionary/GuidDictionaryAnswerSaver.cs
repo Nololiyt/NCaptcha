@@ -80,7 +80,7 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary
             if (!this.answers.TryRemove(guid, out var result))
                 return ValueTask.FromResult((string?)null);
             var (answer, time) = result;
-            return ValueTask.FromResult(!time.HasValue || time >= DateTime.Now ? answer : null);
+            return ValueTask.FromResult(!time.HasValue || time >= DateTime.UtcNow ? answer : null);
         }
     }
 }

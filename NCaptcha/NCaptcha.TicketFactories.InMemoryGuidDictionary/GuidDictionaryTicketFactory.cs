@@ -76,7 +76,7 @@ namespace Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary
                 return ValueTask.FromResult(false);
             if (!this.tickets.TryRemove(guid, out var time))
                 return ValueTask.FromResult(false);
-            return ValueTask.FromResult(!time.HasValue || time >= DateTime.Now);
+            return ValueTask.FromResult(!time.HasValue || time >= DateTime.UtcNow);
         }
     }
 }

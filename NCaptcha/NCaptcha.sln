@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.TicketFactories.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests", "NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests\NCaptcha.AnswerSavers.InMemoryGuidDictionaryTests.csproj", "{4F82D324-75F6-4826-B275-2FB19253ED4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCaptcha.CaptchaFactories.ImageTests", "NCaptcha.CaptchaFactories.ImageTests\NCaptcha.CaptchaFactories.ImageTests.csproj", "{778E44A0-2EF1-4D35-B920-0505F0F46804}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{4F82D324-75F6-4826-B275-2FB19253ED4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F82D324-75F6-4826-B275-2FB19253ED4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F82D324-75F6-4826-B275-2FB19253ED4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{778E44A0-2EF1-4D35-B920-0505F0F46804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{778E44A0-2EF1-4D35-B920-0505F0F46804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{778E44A0-2EF1-4D35-B920-0505F0F46804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{778E44A0-2EF1-4D35-B920-0505F0F46804}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{0F092562-7EFF-4279-8428-8C40D42EB510} = {D2ABBE79-6027-4F1A-B70E-9C1658776D6E}
 		{A3027B0F-2695-4A3A-9DC6-14FD531BD7B0} = {0F092562-7EFF-4279-8428-8C40D42EB510}
 		{4F82D324-75F6-4826-B275-2FB19253ED4E} = {0F092562-7EFF-4279-8428-8C40D42EB510}
+		{778E44A0-2EF1-4D35-B920-0505F0F46804} = {D2ABBE79-6027-4F1A-B70E-9C1658776D6E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDD0A729-ACE2-43CD-A1B3-06B4DCFC31E3}

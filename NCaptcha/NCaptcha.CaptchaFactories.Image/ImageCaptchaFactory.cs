@@ -27,9 +27,10 @@ namespace Nololiyt.Captcha.CaptchaFactories.Image
         /// <param name="answerSaver">The answer saver.</param>
         /// <param name="ticketFactory">The ticket factory.</param>
         /// <param name="settings">The settings.</param>
+        /// <param name="disposeSaverAndFactory">Whether to dispose the saver and the factory or not when being disposed.</param>
         public ImageCaptchaFactory(ICaptchaAnswerSaver<string> answerSaver,
-            ITicketFactory ticketFactory, Settings settings)
-            : base(answerSaver, ticketFactory)
+            ITicketFactory ticketFactory, Settings settings,bool disposeSaverAndFactory = false)
+            : base(answerSaver, ticketFactory, disposeSaverAndFactory)
         {
             if (this.IsDisposed)
                 throw new ObjectDisposedException(null);

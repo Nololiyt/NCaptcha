@@ -1,12 +1,9 @@
-﻿using Nololiyt.Captcha.Extensions;
+﻿using Nololiyt.Captcha.CaptchaFactories.Image.Extensions;
 using Nololiyt.Captcha.Interfaces;
 using Nololiyt.Captcha.Interfaces.Entities;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Drawing.Imaging;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -89,7 +86,7 @@ namespace Nololiyt.Captcha.CaptchaFactories.Image
                 }
                 g.DrawRectangle(silverPen, 0, 0, image.Width - 1, image.Height - 1);
                 var id = await this.SaveAnswerAsync(resultString, cancellationToken).ConfigureAwait(false);
-                return new Captcha<Bitmap>() {
+                return new Captcha() {
                     Display = image,
                     Id = id
                 };

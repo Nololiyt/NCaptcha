@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Nololiyt.Captcha.CaptchaFactories.Image</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>obj\Release\net5.0\NCaptcha.CaptchaFactories.Image.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NCaptcha.CaptchaFactories.Base\NCaptcha.CaptchaFactories.Base.csproj" />
+    <ProjectReference Include="..\NCaptcha.Interfaces\NCaptcha.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

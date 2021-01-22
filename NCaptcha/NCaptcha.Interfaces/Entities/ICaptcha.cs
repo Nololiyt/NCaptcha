@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Nololiyt.Captcha.Interfaces.Entities
+﻿namespace Nololiyt.Captcha.Interfaces.Entities
 {
     /// <summary>
     /// Represents a captcha which is often produced by a captcha factory.
@@ -22,11 +16,5 @@ namespace Nololiyt.Captcha.Interfaces.Entities
         /// Clients shall show something transformed from this to its users, so that they can input the right answer.
         /// </summary>
         TCaptchaDisplay Display { get; }
-    }
-    internal sealed class Captcha<TCaptchaDisplay> : ICaptcha<TCaptchaDisplay>
-    {
-        public string Id { get; init; } = null!;
-
-        public TCaptchaDisplay Display { get; init; } = default!;
     }
 }

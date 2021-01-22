@@ -1,10 +1,5 @@
 ﻿using Nololiyt.Captcha.Interfaces;
-using Nololiyt.Captcha.TicketFactories;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

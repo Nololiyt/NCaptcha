@@ -37,7 +37,6 @@ namespace Nololiyt.Captcha.TicketFactories.InMemoryGuidDictionary
 
         private async Task KeepDeleteAsync(CancellationToken cancellationToken)
         {
-            Random random = new Random();
             for (; ; )
             {
                 if (cancellationToken.IsCancellationRequested)

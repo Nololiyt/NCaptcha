@@ -61,7 +61,7 @@ namespace Nololiyt.Captcha.CaptchaFactories
         /// <returns>The answer. Or <c>null</c> if answer not found.</returns>
         protected async ValueTask<TAnswer?> TryGetAnswerAsync(string id, CancellationToken cancellationToken = default)
         {
-            return await this.answerSaver.TryGetAndRemoveAsync(id, cancellationToken)
+            return await this.answerSaver.TryGetAsync(id, cancellationToken)
                 .ConfigureAwait(false);
         }
 

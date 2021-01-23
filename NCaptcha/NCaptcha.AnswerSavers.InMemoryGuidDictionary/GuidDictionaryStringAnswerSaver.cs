@@ -37,7 +37,6 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary
 
         private async Task KeepDeleteAsync(CancellationToken cancellationToken)
         {
-            Random random = new Random();
             for (; ; )
             {
                 if (cancellationToken.IsCancellationRequested)
@@ -104,7 +103,7 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary
         /// <param name="id">The identification.</param>
         /// <param name="cancellationToken"></param>
         /// <returns>The answer. Or <c>null</c> if answer not found.</returns>
-        public ValueTask<string?> TryGetAndRemoveAsync(string id,
+        public ValueTask<string?> TryGetAsync(string id,
             CancellationToken cancellationToken = default)
         {
             if (this.disposedValue)

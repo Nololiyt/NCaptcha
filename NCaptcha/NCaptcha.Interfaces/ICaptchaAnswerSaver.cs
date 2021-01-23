@@ -35,7 +35,7 @@ namespace Nololiyt.Captcha.Interfaces
         /// <returns>The answer. Or <c>null</c> if answer not found.</returns>
         /// <exception cref="ObjectDisposedException">The instance has been disposed.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        ValueTask<TAnswer?> TryGetAndRemoveAsync(
+        ValueTask<TAnswer?> TryGetAsync(
             string id, CancellationToken cancellationToken = default);
     }
 }

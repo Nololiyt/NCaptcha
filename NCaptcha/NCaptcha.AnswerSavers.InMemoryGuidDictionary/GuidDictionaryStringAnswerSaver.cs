@@ -73,6 +73,7 @@ namespace Nololiyt.Captcha.AnswerSavers.InMemoryGuidDictionary
         /// <returns></returns>
         public void Dispose()
         {
+            this.deleteTaskTokenSource.Cancel();
             this.disposedValue = true;
             GC.SuppressFinalize(this);
         }

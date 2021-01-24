@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Nololiyt.Captcha.Interfaces
+namespace Nololiyt.Captcha.CaptchaFactories
 {
     /// <summary>
     /// Represents an answer saver to save captcha answers.

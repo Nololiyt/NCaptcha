@@ -15,7 +15,7 @@ namespace Nololiyt.Captcha.CaptchaFactories.Image
     /// Represents an implementation of <see cref="ICaptchaFactory{TCaptchaDisplay, TAnswer}"/>,
     /// which produce bitmap displays and users should correctly input the characters on the bitmap as the answer.
     /// </summary>
-    public sealed partial class ImageCaptchaFactory : CaptchaFactory<string>, ICaptchaFactory<Bitmap, string>
+    public sealed partial class ImageCaptchaFactory : StaticAnswerCaptchaFactory<string>, ICaptchaFactory<Bitmap, string>
     {
         private readonly int[] lengths;
         private readonly char[] characters;

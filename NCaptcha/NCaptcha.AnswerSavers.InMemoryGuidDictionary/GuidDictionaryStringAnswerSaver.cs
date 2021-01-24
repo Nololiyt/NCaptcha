@@ -1,4 +1,5 @@
-﻿using Nololiyt.Captcha.Interfaces;
+﻿using Nololiyt.Captcha.CaptchaFactories;
+using Nololiyt.Captcha.Interfaces;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

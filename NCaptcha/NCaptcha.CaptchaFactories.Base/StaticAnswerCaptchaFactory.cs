@@ -9,27 +9,23 @@ namespace Nololiyt.Captcha.CaptchaFactories
     /// Represents a captcha factory's base but not all factories should extend this.
     /// </summary>
     /// <typeparam name="TAnswer">The type of the answer.</typeparam>
-    public abstract class CaptchaFactory<TAnswer> : IDisposable
+    public abstract class StaticAnswerCaptchaFactory<TAnswer> : IDisposable
     {
         private readonly ICaptchaAnswerSaver<TAnswer> answerSaver;
         private readonly ITicketFactory ticketFactory;
 
         /// <summary>
-        /// Get the answer saver.
-        /// </summary>
-        public ICaptchaAnswerSaver<TAnswer> AnswerSaver => this.answerSaver;
-        /// <summary>
-        /// Get the ticket factory.
+        /// Get the bound ticket factory.
         /// </summary>
         public ITicketFactory TicketFactory => this.ticketFactory;
-        private readonly bool disposeSaver;
+        private readonly bool disposeSaverAndFactory;
         /// <summary>
-        /// Initialize a new instance of <see cref="CaptchaFactory{TAnswer}"/> 。
+        /// Initialize a new instance of <see cref="StaticAnswerCaptchaFactory{TAnswer}"/> 。
         /// </summary>
         /// <param name="answerSaver">The answer saver.</param>
         /// <param name="ticketFactory">The ticket factory.</param>
         /// <param name="disposeSaverAndFactory">Whether to dispose the saver and the factory or not when being disposed.</param>
-        public CaptchaFactory(ICaptchaAnswerSaver<TAnswer> answerSaver,
+        public StaticAnswerCaptchaFactory(ICaptchaAnswerSaver<TAnswer> answerSaver,
             ITicketFactory ticketFactory, bool disposeSaverAndFactory = false)
         {
             if (answerSaver == null)
@@ -37,7 +33,7 @@ namespace Nololiyt.Captcha.CaptchaFactories
             if (ticketFactory == null)
                 throw new ArgumentNullException(nameof(ticketFactory));
             this.answerSaver = answerSaver;
-            this.disposeSaver = disposeSaverAndFactory;
+            this.disposeSaverAndFactory = disposeSaverAndFactory;
             this.ticketFactory = ticketFactory;
         }
 
@@ -95,7 +91,7 @@ namespace Nololiyt.Captcha.CaptchaFactories
         {
             if (!this.IsDisposed)
             {
-                if (this.disposeSaver)
+                if (this.disposeSaverAndFactory)
                 {
                     this.answerSaver.Dispose();
                     this.ticketFactory.Dispose();

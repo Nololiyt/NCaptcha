@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>Nololiyt.Captcha.CaptchaFactories.Base</PackageId>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Authors>yueyinqiu5990</Authors>
     <Company>Nololiyt</Company>
     <Product>NCaptcha.CaptchaFactories.Base</Product>

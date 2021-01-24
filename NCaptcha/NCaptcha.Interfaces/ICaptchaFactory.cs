@@ -13,12 +13,6 @@ namespace Nololiyt.Captcha.Interfaces
     public interface ICaptchaFactory<TCaptchaDisplay, TAnswer> : IDisposable
     {
         /// <summary>
-        /// Get the bound answer saver.
-        /// </summary>
-        /// <exception cref="ObjectDisposedException">The instance has been disposed.</exception>
-        /// <exception cref="NotImplementedException">The instance doesn't need an answer saver.</exception>
-        ICaptchaAnswerSaver<TAnswer> AnswerSaver { get; }
-        /// <summary>
         /// Get the bound ticket factory.
         /// </summary>
         /// <exception cref="ObjectDisposedException">The instance has been disposed.</exception>
